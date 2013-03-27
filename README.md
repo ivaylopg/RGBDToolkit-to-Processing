@@ -1,4 +1,13 @@
 RGBDToolkit-to-Processing
 =========================
 
-Convert PNG depth image sequence from RGBD Toolkit to (x,y,z) in Processing.
+Allows you to use RGBD Toolkit to capture a scene and then bring the SAME depth info into processing. This is useful for when two projects need to have identical takes/performances.
+
+This sketch takes the PNG image sequence that comes out of RGBD Toolkit and converst it to (X,Y,Z) coordinates. All it is doing right now is creating a pointcloud, but you can change it to do pretty much anything.
+
+This does not (yet) take into account the geometric callibration done in RGBD Toolkit, although it seems to be just a matter of modifying the constants in the depthToWorld() function. If anyone wants to play around with this, let me know. I probably won't get to it until it becomes an issue in the project I'm working on.
+
+Make sure you have a good amount of memory allocated for Processing in the preferences if you will be using very long image sequences. If you find that it keeps running out of memory, try pausing playback while you're moving the camera around, and then start it again when you find a good angle.
+
+Feel free to improve the code and make changes. Let me know if you have any questions:
+contact@ivaylogetov.com
